@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-
+import Hp from './../../content/assets/hp.jpg'
 import { rhythm, scale } from "../utils/typography"
 
 class Layout extends React.Component {
@@ -11,6 +11,7 @@ class Layout extends React.Component {
 
     if (location.pathname === rootPath) {
       header = (
+    
         <h1
           style={{
             ...scale(1.5),
@@ -26,7 +27,7 @@ class Layout extends React.Component {
             }}
             to={`/`}
           >
-            {title}
+            <img src={Hp}></img>
           </Link>
         </h1>
       )
@@ -65,7 +66,7 @@ class Layout extends React.Component {
         <footer>
           © {new Date().getFullYear()}, Built with
           {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+          <a href="https://www.gatsbyjs.org">Gatsby</a> edited by acidCode
         </footer>
       </div>
     )

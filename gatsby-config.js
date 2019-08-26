@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Napoli Café`,
-    author: `Jan Örberg`,
+    author: `John Örberg`,
     description: `Great music, saved on tape - served digital.`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
     social: {
