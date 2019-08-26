@@ -46,7 +46,6 @@ class BlogPostTemplate extends React.Component {
             }}
           />
           <footer>
-            <Bio />
           </footer>
         </article>
 
@@ -98,7 +97,6 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
-        description
       }
     }
   }
