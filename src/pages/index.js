@@ -21,10 +21,13 @@ class BlogIndex extends React.Component {
               <header>
                 <h3
                   style={{
-                    marginBottom: rhythm(1 / 4),
+                    marginBottom: rhythm(1 / 4),                  
                   }}
                 >
-                  <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+                  <Link style={{ 
+                    boxShadow: `none`,
+                    color: `#333`
+                  }} to={node.fields.slug}>
                     {title}
                   </Link>
                 </h3>

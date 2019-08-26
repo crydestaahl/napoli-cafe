@@ -17,17 +17,18 @@ class Layout extends React.Component {
             ...scale(1.5),
             marginBottom: rhythm(1.5),
             marginTop: 0,
+            color: `#333`
           }}
         >
           <Link
             style={{
               boxShadow: `none`,
               textDecoration: `none`,
-              color: `#333`,
+              color: `#333 !important`,
             }}
             to={`/`}
           >
-            <img src={Hp}></img>
+            <img src={Hp} alt="Napoli Café Logo"></img>
           </Link>
         </h1>
       )
