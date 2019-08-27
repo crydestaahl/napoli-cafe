@@ -10,7 +10,8 @@ class BlogIndex extends React.Component {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
     const posts = data.allMarkdownRemark.edges
-
+  
+  
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="Tapes" />
@@ -19,19 +20,19 @@ class BlogIndex extends React.Component {
           return (
             <article key={node.fields.slug}>
               <header>
-                <h3
+                <h1
                   style={{
                     marginBottom: rhythm(1 / 4),                  
                   }}
                 >
                   <Link style={{ 
                     boxShadow: `none`,
-                    color: `#333`
+                    color: `#333`                
                   }} to={node.fields.slug}>
                     {title}
                   </Link>
-                </h3>
-                <small>{node.frontmatter.date}</small>
+                </h1>
+                <p>{node.frontmatter.date}</p>
               </header>
               <div>
                 <p
@@ -39,12 +40,8 @@ class BlogIndex extends React.Component {
                     __html: node.frontmatter.description || node.excerpt,                    
                   }}
                 />
-                <p
-                  dangerouslySetInnerHTML={{
-                    __html: node.frontmatter.body || node.excerpt,
-                  }}
-                />
-              </div>
+                         
+              </div>        
             </article>
           )
         })}
@@ -68,7 +65,7 @@ export const pageQuery = graphql`
           excerpt
           fields {
             slug
-          }
+          }          
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
