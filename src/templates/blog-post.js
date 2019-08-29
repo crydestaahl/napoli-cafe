@@ -26,7 +26,7 @@ class BlogPostTemplate extends React.Component {
                 color: `#333`
               }}
             >
-              {post.frontmatter.title}
+              {post.frontmatter.date}
             </h1>
             <p
               style={{
@@ -38,6 +38,7 @@ class BlogPostTemplate extends React.Component {
               {post.frontmatter.date}
             </p>
           </header>
+         
           <section dangerouslySetInnerHTML={{ __html: post.html }} />
           <hr
             style={{
