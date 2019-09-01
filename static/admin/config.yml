@@ -12,5 +12,5 @@ collections:
       - { name: path, label: Path }
       - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
-      - { name: widget, label: Widget}
+      - { name: widget, label: Widget, widget: markdown}
       - { name: body, label: Body, widget: markdown }

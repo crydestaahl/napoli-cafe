@@ -35,10 +35,10 @@ class BlogIndex extends React.Component {
                     {node.excerpt}
                   </Link>
                 </h1>
-
+                  
+                {node.frontmatter.widget.slice(0, -1)}
                
                 <p>{node.frontmatter.date}</p> {/* <-- The widget */}
-                
                 <p              
                   dangerouslySetInnerHTML={{
                     __html: node.frontmatter.title
@@ -79,7 +79,8 @@ export const pageQuery = graphql`
           }          
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
-            title    
+            title   
+            widget 
           }
         }
       }
