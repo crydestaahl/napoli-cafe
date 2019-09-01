@@ -10,7 +10,7 @@ class BlogIndex extends React.Component {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
     const posts = data.allMarkdownRemark.edges
-  
+    console.log(data)
   
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -19,6 +19,7 @@ class BlogIndex extends React.Component {
           const title = node.frontmatter.title || node.fields.slug
           return (
             <article key={node.fields.slug}>
+             
               <header>
                 <h1
                   style={{
@@ -29,10 +30,20 @@ class BlogIndex extends React.Component {
                     boxShadow: `none`,
                     color: `#333`                
                   }} to={node.fields.slug}>
-                    {title}
+                    
+                  {/* title <-- The old title */} 
+                    {node.excerpt}
                   </Link>
                 </h1>
-                <p>{node.frontmatter.date}</p>
+
+               
+                <p>{node.frontmatter.date}</p> {/* <-- The widget */}
+                
+                <p              
+                  dangerouslySetInnerHTML={{
+                    __html: node.frontmatter.title
+                  }}
+                />
               </header>
               <div>
                 <p
@@ -68,7 +79,7 @@ export const pageQuery = graphql`
           }          
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
-            title
+            title    
           }
         }
       }
