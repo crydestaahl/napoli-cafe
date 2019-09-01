@@ -29,29 +29,28 @@ class BlogIndex extends React.Component {
                   <Link style={{ 
                     boxShadow: `none`,
                     color: `#333`                
-                  }} to={node.fields.slug}>
-                    
-                  {/* title <-- The old title */} 
-                    {node.excerpt}
+                  }} to={node.fields.slug}>                    
+                  {title} 
                   </Link>
                 </h1>
-                  
-                {node.frontmatter.widget.slice(0, -1)}
-               
-                <p>{node.frontmatter.date}</p> {/* <-- The widget */}
-                <p              
-                  dangerouslySetInnerHTML={{
-                    __html: node.frontmatter.title
-                  }}
-                />
+                
+                <p>{node.frontmatter.date}</p> 
+
               </header>
               <div>
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: node.frontmatter.widget
+                  }}
+                />
+
+{/* 
                 <p
                   dangerouslySetInnerHTML={{
                     __html: node.frontmatter.description || node.excerpt,                    
                   }}
                 />
-                         
+*/}                     
               </div>        
             </article>
           )
