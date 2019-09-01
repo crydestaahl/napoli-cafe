@@ -38,7 +38,9 @@ class BlogPostTemplate extends React.Component {
               {post.frontmatter.date}
             </p>
           </header>
-         
+          
+          <p dangerouslySetInnerHTML={{ __html: post.frontmatter.widget}}/>
+
           <section dangerouslySetInnerHTML={{ __html: post.html }} />
           <hr
             style={{
@@ -97,6 +99,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+        widget
       }
     }
   }
