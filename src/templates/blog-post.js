@@ -26,7 +26,8 @@ class BlogPostTemplate extends React.Component {
                 color: `#333`
               }}
             >
-              {post.frontmatter.date}
+              {post.frontmatter.title}
+              
             </h1>
             <p
               style={{
