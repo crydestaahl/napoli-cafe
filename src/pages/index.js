@@ -23,7 +23,8 @@ class BlogIndex extends React.Component {
               <header>
                 <h1
                   style={{
-                    marginBottom: rhythm(1 / 4),                  
+                    marginBottom: rhythm(1 / 4),
+                    fontFamily: 'Work Sans'                  
                   }}
                 >
                   <Link style={{ 
@@ -34,7 +35,10 @@ class BlogIndex extends React.Component {
                   </Link>
                 </h1>
                 
-                <p>{node.frontmatter.date}</p> 
+                <p style={{
+                    fontFamily: 'Work Sans'}}>
+                  {node.frontmatter.date}
+                </p> 
 
               </header>
               <div>
