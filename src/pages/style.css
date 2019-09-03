@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans&display=swap'); 
+
+html, 
+p, 
+h1, 
+h2, 
+h3,
+li, 
+footer {
+    font-family: 'Work Sans', sans-serif;
+}
+

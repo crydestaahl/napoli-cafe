@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import './style.css'
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -23,8 +24,7 @@ class BlogIndex extends React.Component {
               <header>
                 <h1
                   style={{
-                    marginBottom: rhythm(1 / 4),
-                    fontFamily: 'Work Sans'                  
+                    marginBottom: rhythm(1 / 4)                
                   }}
                 >
                   <Link style={{ 
@@ -35,8 +35,7 @@ class BlogIndex extends React.Component {
                   </Link>
                 </h1>
                 
-                <p style={{
-                    fontFamily: 'Work Sans'}}>
+                <p>
                   {node.frontmatter.date}
                 </p> 
 
