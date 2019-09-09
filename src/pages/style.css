@@ -10,3 +10,12 @@ footer {
     font-family: 'Work Sans', sans-serif;
 }
 
+.btn {
+    color: black; 
+    font-family: inherit;
+    background-color: none; 
+    border: none;
+    font-family: 'Work Sans';
+    font-weight: bold;
+    margin: 0 0 4em;
+}

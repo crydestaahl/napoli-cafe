@@ -5,13 +5,27 @@ import './style.css'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
+import AnimateHeight from 'react-animate-height';
 
 class BlogIndex extends React.Component {
+ 
+  state = {
+    height: 0,
+  };
+
+  toggle = () => {
+    const { height } = this.state;
+
+    this.setState({
+      height: height === 0 ? 'auto' : 0,
+    });
+  };
+  
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
     const posts = data.allMarkdownRemark.edges
-    console.log(data)
+    const { height } = this.state;
   
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -47,13 +61,18 @@ class BlogIndex extends React.Component {
                   }}
                 />
 
-{/* 
-                <p
-                  dangerouslySetInnerHTML={{
-                    __html: node.frontmatter.description || node.excerpt,                    
-                  }}
-                />
-*/}                     
+                <AnimateHeight
+                  duration={800}
+                  height={height}>  
+                  <p
+                    dangerouslySetInnerHTML={{
+                      __html: node.excerpt
+                    }}
+                  />    
+                </AnimateHeight>                     
+                <button className="btn" onClick={this.toggle}>
+                  {height === 0 ? 'Show Track List' : 'Hide Tracklist'}
+                </button>                       
               </div>        
             </article>
           )
