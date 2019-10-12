@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import Hp from './../../content/assets/hp.jpg'
+import Hp from './../../content/assets/Napolicafé.png'
 import { rhythm, scale } from "../utils/typography"
 
 class Layout extends React.Component {

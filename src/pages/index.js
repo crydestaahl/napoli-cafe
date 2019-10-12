@@ -41,11 +41,13 @@ class BlogIndex extends React.Component {
                     marginBottom: rhythm(1 / 4)                
                   }}
                 >
-                  <Link style={{ 
+                  <Link 
+                    style={{ 
                     boxShadow: `none`,
                     color: `#333`                
-                  }} to={node.fields.slug}>                    
-                  {title} 
+                  }} 
+                    to={node.fields.slug}>                    
+                    {title} 
                   </Link>
                 </h1>
                 
@@ -54,13 +56,12 @@ class BlogIndex extends React.Component {
                 </p> 
 
               </header>
-              <div>
+              <div>                        
                 <p
                   dangerouslySetInnerHTML={{
                     __html: node.frontmatter.widget
                   }}
-                />
-
+                />                              
                 <AnimateHeight
                   duration={800}
                   height={height}>  
@@ -70,8 +71,11 @@ class BlogIndex extends React.Component {
                     }}
                   />    
                 </AnimateHeight>                     
-                <button className="btn" onClick={this.toggle}>
-                  {height === 0 ? 'Show Track List' : 'Hide Tracklist'}
+                <button 
+                  className="btn" 
+                  onClick={this.toggle}
+                  >
+                  {height === 0 ? 'Show Track List' : 'Hide Tracklist'}                  
                 </button>                       
               </div>        
             </article>
