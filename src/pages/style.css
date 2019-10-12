@@ -13,7 +13,7 @@ footer {
 .btn {
     color: black; 
     font-family: inherit;
-    background-color: none; 
+    background: none; 
     border: none;
     font-family: 'Work Sans';
     font-weight: bold;
