@@ -5,7 +5,9 @@ import './style.css'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
-import AnimateHeight from 'react-animate-height';
+import AnimateHeight from 'react-animate-height'
+
+import { ParallaxProvider } from 'react-scroll-parallax'
 
 class BlogIndex extends React.Component {
  
@@ -28,6 +30,7 @@ class BlogIndex extends React.Component {
     const { height } = this.state;
   
     return (
+      <ParallaxProvider>  
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="Tapes" />
         {posts.map(({ node }) => {
@@ -82,6 +85,7 @@ class BlogIndex extends React.Component {
           )
         })}
       </Layout>
+      </ParallaxProvider>
     )
   }
 }

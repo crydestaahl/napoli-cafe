@@ -34,6 +34,7 @@
     "react-helmet": "^5.2.1",
     "react-pure-loaders": "^3.0.0",
     "react-reveal": "^1.2.2",
+    "react-scroll-parallax": "^2.2.0",
     "react-typography": "^0.16.19",
     "typeface-merriweather": "0.0.72",
     "typeface-montserrat": "0.0.75",

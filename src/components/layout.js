@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import Hp from './../../content/assets/Napolicafé.png'
 import { rhythm, scale } from "../utils/typography"
 import Fade from 'react-reveal/Fade'
+import { Parallax } from 'react-scroll-parallax'
 
 class Layout extends React.Component {
   
@@ -31,14 +32,14 @@ class Layout extends React.Component {
             }}
             to={`/`}
           >
-
+            <Parallax className="custom-class" y={[-50, 20]} tagOuter="figure">              
             <img src={Hp} alt="Napoli Café Logo"
               style={{
                 marginTop: `${width > 375 ? 25 : 40}%`,              
               }}
             >
             </img>           
-
+            </Parallax>
           </Link>
         </h1>
       )
