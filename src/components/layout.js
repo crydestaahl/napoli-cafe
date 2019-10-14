@@ -8,10 +8,10 @@ import { Parallax } from 'react-scroll-parallax'
 class Layout extends React.Component {
   
   render() {
+    let width = window.innerWidth
     const { location, title, children } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
     let header
-    let width = window.innerWidth
 
     if (location.pathname === rootPath) {
       header = (
@@ -74,10 +74,10 @@ class Layout extends React.Component {
         }}
       >
         <Fade cascade>
-          <header 
+          <header
             style={{
-              height: `${width > 375 ? 90 : 70 }vh` 
-          }}
+              height: `${width > 375 ? 90 : 70}vh`
+            }}
           >
           {header}
           </header> 
