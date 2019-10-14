@@ -8,6 +8,7 @@ import { rhythm, scale } from "../utils/typography"
 import '../pages/style.css'
 
 class BlogPostTemplate extends React.Component {
+
   render() {
     const post = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
@@ -41,7 +42,7 @@ class BlogPostTemplate extends React.Component {
               {post.frontmatter.date}
             </p>
           </header>
-          
+                    
           <p dangerouslySetInnerHTML={{ __html: post.frontmatter.widget}}/>
 
           <section dangerouslySetInnerHTML={{ __html: post.html }} />

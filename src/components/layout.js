@@ -2,12 +2,15 @@ import React from "react"
 import { Link } from "gatsby"
 import Hp from './../../content/assets/Napolicafé.png'
 import { rhythm, scale } from "../utils/typography"
+import Fade from 'react-reveal/Fade'
 
 class Layout extends React.Component {
+  
   render() {
     const { location, title, children } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
     let header
+    let width = window.innerWidth
 
     if (location.pathname === rootPath) {
       header = (
@@ -28,7 +31,14 @@ class Layout extends React.Component {
             }}
             to={`/`}
           >
-            <img src={Hp} alt="Napoli Café Logo"></img>
+
+            <img src={Hp} alt="Napoli Café Logo"
+              style={{
+                marginTop: `${width > 375 ? 25 : 40}%`,              
+              }}
+            >
+            </img>           
+
           </Link>
         </h1>
       )
@@ -59,16 +69,26 @@ class Layout extends React.Component {
           marginLeft: `auto`,
           marginRight: `auto`,
           maxWidth: rhythm(24),
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,        
         }}
       >
-        <header>{header}</header>
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a> edited by acidCode
-        </footer>
+        <Fade cascade>
+          <header 
+            style={{
+              height: `${width > 375 ? 90 : 70 }vh` 
+          }}
+          >
+          {header}
+          </header> 
+         
+          <main>{children}</main>
+          
+          <footer>
+            © {new Date().getFullYear()}, Built with
+            {` `}
+            <a href="https://www.gatsbyjs.org">Gatsby</a> edited by acidCode
+          </footer>
+        </Fade>  
       </div>
     )
   }
