@@ -6,16 +6,34 @@ import Fade from 'react-reveal/Fade'
 import { Parallax } from 'react-scroll-parallax'
 
 class Layout extends React.Component {
-  
+  constructor(props) {
+    super(props);
+    this.state = { width: 0, height: 0 };
+    this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+  }
+
+  componentDidMount() {
+    this.updateWindowDimensions();
+    window.addEventListener('resize', this.updateWindowDimensions);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateWindowDimensions);
+  }
+
+  updateWindowDimensions() {
+    this.setState({ width: window.innerWidth, height: window.innerHeight });
+  }
+
   render() {
-    let width = window.innerWidth
     const { location, title, children } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
     let header
-
+   
     if (location.pathname === rootPath) {
+      
       header = (
-    
+        
         <h1
           style={{
             ...scale(1.5),
@@ -35,7 +53,7 @@ class Layout extends React.Component {
             <Parallax className="custom-class" y={[-50, 20]} tagOuter="figure">              
             <img src={Hp} alt="Napoli Café Logo"
               style={{
-                marginTop: `${width > 375 ? 25 : 40}%`,              
+                marginTop: `${this.state.width > 375 ? 25 : 40}%`,              
               }}
             >
             </img>           
@@ -76,7 +94,7 @@ class Layout extends React.Component {
         <Fade cascade>
           <header
             style={{
-              height: `${width > 375 ? 90 : 70}vh`
+              height: `${this.state.width > 375 ? 90 : 80}vh`
             }}
           >
           {header}
