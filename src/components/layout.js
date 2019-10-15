@@ -53,7 +53,7 @@ class Layout extends React.Component {
             <Parallax className="custom-class" y={[-50, 20]} tagOuter="figure">              
             <img src={Hp} alt="Napoli Café Logo"
               style={{
-                marginTop: `${this.state.width > 375 ? 25 : 40}%`,              
+                marginTop: `${this.state.width > 375 ? 25 : 53}%`,              
               }}
             >
             </img>           
