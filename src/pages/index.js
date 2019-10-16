@@ -1,13 +1,12 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import './style.css'
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
 import AnimateHeight from 'react-animate-height'
-
 import { ParallaxProvider } from 'react-scroll-parallax'
+
+import './style.css'
 
 class BlogIndex extends React.Component {
  
@@ -60,7 +59,10 @@ class BlogIndex extends React.Component {
 
               </header>
               <div>                        
-                <p
+                <p 
+                  style={{
+                    zIndex: 50
+                  }}
                   dangerouslySetInnerHTML={{
                     __html: node.frontmatter.widget
                   }}
@@ -79,7 +81,7 @@ class BlogIndex extends React.Component {
                   onClick={this.toggle}
                   >
                   {height === 0 ? 'Show Track List' : 'Hide Tracklist'}                  
-                </button>                       
+                </button>                  
               </div>        
             </article>
           )

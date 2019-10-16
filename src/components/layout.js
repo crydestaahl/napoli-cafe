@@ -59,10 +59,12 @@ class Layout extends React.Component {
                 marginTop: `${this.state.width > 420 ? 25 : 61}%`,              
               }}
             >
-            </img>                        
+            </img>
+                       
             </Parallax>
           </Link>
         </h1>
+        
       )
     } else {
       header = (
