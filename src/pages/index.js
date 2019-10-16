@@ -36,7 +36,7 @@ class BlogIndex extends React.Component {
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
-            <article key={node.fields.slug}>
+            <article key={node.fields.slug} style={{ marginTop: `40%`}}>
              
               <header>
                 <h1
@@ -47,7 +47,7 @@ class BlogIndex extends React.Component {
                   <Link 
                     style={{ 
                     boxShadow: `none`,
-                    color: `#333`                
+                    color: `#333`,                                    
                   }} 
                     to={node.fields.slug}>                    
                     {title} 

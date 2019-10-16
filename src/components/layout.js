@@ -8,7 +8,10 @@ import { Parallax } from 'react-scroll-parallax'
 class Layout extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { width: 0, height: 0 };
+    this.state = { 
+      width: 0, 
+      height: 0 
+    }
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
   }
 
@@ -56,7 +59,7 @@ class Layout extends React.Component {
                 marginTop: `${this.state.width > 420 ? 25 : 61}%`,              
               }}
             >
-            </img>           
+            </img>                        
             </Parallax>
           </Link>
         </h1>
@@ -94,7 +97,7 @@ class Layout extends React.Component {
         <Fade cascade>
           <header
             style={{
-              height: `${this.state.width > 375 ? 90 : 80}vh`
+              // height: `${this.state.width > 375 ? 90 : 80}vh`
             }}
           >
           {header}
