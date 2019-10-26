@@ -4,6 +4,7 @@ import Hp from './../../content/assets/Napolicafé.png'
 import { rhythm, scale } from "../utils/typography"
 import Fade from 'react-reveal/Fade'
 import { Parallax } from 'react-scroll-parallax'
+import '../pages/style.css'
 
 class Layout extends React.Component {
   constructor(props) {
@@ -37,19 +38,19 @@ class Layout extends React.Component {
       
       header = (
         
-        <h1
+        <h1 
           style={{
             ...scale(1.5),
             marginBottom: rhythm(1.5),
             marginTop: 0,
-            color: `#333`
+            fontWeight: `bold`,
+            fontStyle: `italic` 
           }}
         >
           <Link
             style={{
               boxShadow: `none`,
               textDecoration: `none`,
-              color: `#333 !important`,
             }}
             to={`/`}
           >

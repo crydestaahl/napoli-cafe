@@ -23,14 +23,14 @@ class BlogPostTemplate extends React.Component {
         <article>
           <header>
             <h1
+              className="transition"
               style={{
                 marginTop: rhythm(1),
-                marginBottom: 0,
-                color: `#333`
-              }}
-            >
+                marginBottom: 0,                      
+      }}
+    >
               {post.frontmatter.title}
-              
+
             </h1>
             <p
               style={{

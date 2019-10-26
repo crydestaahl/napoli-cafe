@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Work+Sans&display=swap'); 
 
+@font-face {
+    font-family: 'akzidenz-grotesk_bqbold';
+    src: url('../../content/assets/akzidenz-grotesk-bq-bold_2810-webfont.woff2') format('woff2'),
+         url('../../content/assets/akzidenz-grotesk-bq-bold_2810-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 html, 
 p, 
 h1, 
@@ -10,6 +19,8 @@ footer {
     font-family: 'Work Sans', sans-serif;
 }
 
+
+
 .btn {
     color: black; 
     font-family: inherit;
@@ -18,8 +29,35 @@ footer {
     font-family: 'Work Sans';
     font-weight: bold;
     margin: 0 0 4em;
+    animation: transition 8s; 
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
 }
 
 p {
     color: black;
+    animation: transition 6s; 
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+
+}
+
+h1, a, .transition {
+    color: black; 
+    font-family: 'akzidenz-grotesk_bqbold';
+    animation: transition 8s; 
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes transition {
+    0% {
+        color: black;         
+    }
+    50% {
+        color: #0f669c; 
+    }
+    100% {
+         color: black;   
+    }
 }
