@@ -79,7 +79,7 @@ class BlogIndex extends React.Component {
                   className="btn" 
                   onClick={this.toggle}
                   >
-                  {height === 0 ? 'Show Track List' : 'Hide Tracklist'}                  
+                  {height === 0 ? 'Show Tracklist' : 'Hide Tracklist'}                  
                 </button>                  
               </div>        
             </article>

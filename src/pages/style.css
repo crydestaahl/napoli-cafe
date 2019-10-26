@@ -45,6 +45,8 @@ p {
 h1, a, .transition {
     color: black; 
     font-family: 'akzidenz-grotesk_bqbold';
+    letter-spacing: -2px;
+    text-transform: uppercase;
     animation: transition 8s; 
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
