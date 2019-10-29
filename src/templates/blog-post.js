@@ -26,7 +26,7 @@ class BlogPostTemplate extends React.Component {
               className="transition"
               style={{
                 marginTop: rhythm(1),
-                marginBottom: 0,                      
+                marginBottom: 0,                 
       }}
     >
               {post.frontmatter.title}

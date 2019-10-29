@@ -19,21 +19,6 @@ footer {
     font-family: 'Work Sans', sans-serif;
 }
 
-
-
-.btn {
-    color: black; 
-    font-family: inherit;
-    background: none; 
-    border: none;
-    font-family: 'Work Sans';
-    font-weight: bold;
-    margin: 0 0 4em;
-    animation: transition 8s; 
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-}
-
 p {
     color: black;
     animation: transition 6s; 
@@ -52,6 +37,29 @@ h1, a, .transition {
     animation-timing-function: ease-in-out;
 }
 
+.btn {
+    color: black; 
+    font-family: inherit;
+    background: none; 
+    border: none;
+    font-family: 'Work Sans';
+    font-weight: bold;
+    margin: 0 0 4em;
+    animation: transition 8s; 
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.centered {
+    text-align: center;
+}
+.logo-image path {    
+    fill: #0f669c; 
+    animation: transition2 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out; 
+}
+
 @keyframes transition {
     0% {
         color: black;         
@@ -61,5 +69,17 @@ h1, a, .transition {
     }
     100% {
          color: black;   
+    }
+}
+
+@keyframes transition2 {
+    0% {
+        fill: black;         
+    }
+    50% {
+        fill: #0f669c; 
+    }
+    100% {
+        fill: black;   
     }
 }
