@@ -550,9 +550,9 @@ class Layout extends React.Component {
           <footer>
             © {new Date().getFullYear()}, Built with
             {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a> 
-            edited by acidCode
-            Got something to say? Contact <a href="mailto:dimmi@napoli-cafe.com">Dimmie</a>. 
+            <a href="https://www.gatsbyjs.org">Gatsby</a>{` `} 
+             edited by acidCode.
+            Got something on your mind? Contact <a href="mailto:dimmi@napoli-cafe.com">Dimmie</a>. 
           </footer>
         </Fade>  
       </div>
