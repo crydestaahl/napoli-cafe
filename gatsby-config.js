@@ -1,11 +1,21 @@
 module.exports = {
   siteMetadata: {
     title: `Napoli Café`,
+      menuLinks: [
+          {
+            name: 'Tejps/Home',
+            link: '/'
+          },
+          {
+            name: 'Napoli Nel Courie',
+            link: 'napolinelcourie'
+            }
+          ],
     author: `John Örberg`,
     description: `Napoli sound, saved on tape - served digital.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    siteUrl: `https://www.napoli-cafe.com/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: ``,
     },
   },
   plugins: [
@@ -34,6 +44,7 @@ module.exports = {
             options: {
               maxWidth: 590,
             },
+            
           },
           {
             resolve: `gatsby-remark-responsive-iframe`,

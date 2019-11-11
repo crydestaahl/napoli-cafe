@@ -4,6 +4,7 @@ import { rhythm, scale } from "../utils/typography"
 import Fade from 'react-reveal/Fade'
 import { Parallax } from 'react-scroll-parallax'
 import '../pages/style.css'
+import Navbar from './Navbar.js'
 
 class Layout extends React.Component {
   constructor(props) {
@@ -522,39 +523,42 @@ class Layout extends React.Component {
             }}
             to={`/`}
           >
-            {title}
+          {/*  {title}*/}
           </Link>
         </h3>
       )
     }
     return (
-      <div
-        style={{
-          marginLeft: `auto`,
-          marginRight: `auto`,
-          maxWidth: rhythm(24),
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,        
-        }}
-      >
-        <Fade cascade>
-          <header
-            style={{
-              // height: `${this.state.width > 375 ? 90 : 80}vh`
-            }}
-          >
-          {header}
-          </header> 
-         
-          <main>{children}</main>
+      <div>
+        <Navbar />
+        <div
+          style={{
+            marginLeft: `auto`,
+            marginRight: `auto`,
+            maxWidth: rhythm(24),
+            padding: `${rhythm(1.5)} ${rhythm(1 / 8)}`,    
+          }}
+        >
+          <Fade cascade>
+            <header
+              style={{
+                // height: `${this.state.width > 375 ? 90 : 80}vh`
+              }}
+            >
+            {header}
+            </header> 
           
-          <footer>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>{` `} 
-             edited by acidCode.
-            Got something on your mind? Contact <a href="mailto:dimmi@napoli-cafe.com">Dimmi</a>. 
-          </footer>
-        </Fade>  
+            <main>{children}</main>
+            
+            <footer>
+              © {new Date().getFullYear()}, Built with
+              {` `}
+              <a href="https://www.gatsbyjs.org">Gatsby</a>{` `} 
+              edited by acidCode.
+              Got something on your mind? Contact <a href="mailto:dimmi@napoli-cafe.com">Dimmi</a>. 
+            </footer>
+          </Fade>  
+        </div>
       </div>
     )
   }

@@ -7,6 +7,7 @@ import AnimateHeight from 'react-animate-height'
 import { ParallaxProvider } from 'react-scroll-parallax'
 
 import './style.css'
+import Navbar from "../components/Navbar"
 
 class BlogIndex extends React.Component {
  
@@ -35,27 +36,24 @@ class BlogIndex extends React.Component {
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
-            <article key={node.fields.slug} style={{ marginTop: `40%`}}>
-             
-              <header>
-                <h1
-                  style={{
-                    marginBottom: rhythm(1 / 4)                
-                  }}
-                >
-                  <Link 
-                    style={{ 
-                    boxShadow: `none`,                                               
-                  }} 
-                    to={node.fields.slug}>                    
-                    {title} 
-                  </Link>
-                </h1>
-                
-                <p>
-                  {node.frontmatter.date}
-                </p> 
-
+            <article key={node.fields.slug} style={{ marginTop: `40%`}}>              
+              <header>               
+                  <h1
+                    style={{
+                      marginBottom: rhythm(1 / 4)                
+                    }}
+                  >
+                    <Link 
+                      style={{ 
+                      boxShadow: `none`,                                               
+                    }} 
+                      to={node.fields.slug}>                    
+                      {title} 
+                    </Link>
+                  </h1>
+                  <p>
+                    {node.frontmatter.date}
+                  </p> 
               </header>
               <div>                        
                 <p 
@@ -98,6 +96,10 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        menuLinks {
+          name
+          link
+        }
       }
     }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
