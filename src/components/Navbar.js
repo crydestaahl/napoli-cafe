@@ -1,11 +1,16 @@
 import React, { useState, useEffect } from 'react'
 import { useStaticQuery, graphql, Link } from "gatsby"
 import style from '../pages/style.css'
+import useWindowSize from './use-window-size';
 
 
 const Navbar = () => {
     let [pos, setPos] = useState(window.pageYOffset);
     let [visible, setVisible]  = useState(true); 
+    const [isActive, setActive] = useState(false);
+    const [height, setheight] = useState(98);
+    
+    const size = useWindowSize();
     const data = useStaticQuery(graphql`
         query Navbar {
             site {
@@ -19,7 +24,7 @@ const Navbar = () => {
         }
     `)  
     const { menuLinks } = data.site.siteMetadata
-
+    
     useEffect(()=> {
         const handleScroll = () => {
             let temp = window.pageYOffset;
@@ -33,9 +38,11 @@ const Navbar = () => {
             })
     })
 
+    function toggleIsActive() {
+      setActive(isActive === false ? true : false) 
+    }
 
-    return(
-        <div>
+    const deskotopNav = (   
             <nav 
                 className={"navbar " + (!visible ? "navbarHidden" : " ")}            
                 style={{                
@@ -71,8 +78,54 @@ const Navbar = () => {
                     ))}
                 </ul>
             </nav>
-        </div> 
-    )
+    );
+
+    const mobileNav = (
+            <nav >
+            <div 
+                class={"container" + (isActive ? ' change' : '')} 
+                onClick={ toggleIsActive }                
+                >
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>     
+                <div
+                    class="mobile-nav-links"
+                    style={{ 
+                        height: (isActive ? height : 6),                        
+                    }}
+                >
+                    <ul>
+                        {menuLinks.map(link => (
+                            <li
+                                key={link.name}
+                                style={{
+                                    listStyleType: `none`,
+                                    
+                                }}
+                            >
+                                <Link                                
+                                    style={{
+                                        color: `black`,
+                                        background: 'c8f331'
+                                    }} to={link.link}>
+                                    {link.name}
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
+                            
+                </div>
+            </nav>               
+    );
+
+    return(
+      <div>
+      { size.width < 450 ? mobileNav : deskotopNav }
+      </div>
+    );                 
+                
 }
 
 export default Navbar

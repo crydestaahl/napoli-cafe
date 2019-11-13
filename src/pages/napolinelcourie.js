@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Navbar from '../components/Navbar'
 import Fade from 'react-reveal/Fade'
+import { graphql } from "gatsby"
 
 
 class napoliNelCorie extends Component {
@@ -29,20 +30,36 @@ class napoliNelCorie extends Component {
    
     render() {
         return(
-            <Fade cascade>            
-                <div
+            <Fade cascade>                        
+                <div                    
                     style={{
                         textAlign: `center`
                     }}
                 >
                     <Navbar />
+                    <h1                        
+                        style={{
+                            marginTop: `auto`,
+                            padding: '2em 0.4em 0',
+                            textAlign: 'left',
+                            animation: 'transition 8s'                                  
+                            }}                
+                        >
+                        Napoli El Courie
+                    </h1>
+                    <h5
+                        style={{
+                            textAlign: 'left',
+                            paddingLeft: '1.5em',
+                            animation: 'transition 8s'      
+                        }}
+                    >Photos: Al Bundy</h5>
+                    <div>
                     {this.state.pictures}            
+                    </div>
                 </div>           
             </Fade>
         )
     }
 }
 export default napoliNelCorie
-    
-const key = 'FKLU3Uz1GfECLuNgoZ1U8qkjXtF2Zj9oCp0a25YOE1prDT5TIk'   
-const hela = "https://api.tumblr.com/v2/blog/napolicafeforever/posts/photo?api_key=FKLU3Uz1GfECLuNgoZ1U8qkjXtF2Zj9oCp0a25YOE1prDT5TIk"
