@@ -112,7 +112,7 @@ const Navbar = () => {
     );
 
     const mobileNav = (
-            <nav >
+            <nav className="donotshow">
             <div 
                 class={"container" + (isActive ? ' change' : '')} 
                 onClick={ toggleIsActive }                
