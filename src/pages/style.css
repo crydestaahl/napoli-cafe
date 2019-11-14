@@ -111,11 +111,6 @@ nav ul li a {
   transform: rotate(45deg) translate(-8px, -8px);
 }
 
-
-.nelcourie {
-
-}
-
 @keyframes heightAnimation {
     0% {
         height: 58px,
