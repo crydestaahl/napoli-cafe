@@ -6,7 +6,8 @@ import style from '../pages/style.css'
 
 
 const Navbar = () => {
-    let [pos, setPos] = useState(window.pageYOffset);
+    const globalWindow = typeof window !== 'undefined' && window;
+    let [pos, setPos] = useState(globalWindow.pageYOffset);
     let [visible, setVisible]  = useState(true); 
     const [isActive, setActive] = useState(false);
     const [height, setheight] = useState(98);
