@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import { useStaticQuery, graphql, Link } from "gatsby"
 import style from '../pages/style.css'
-import useWindowSize from './use-window-size';
+//import useWindowSize from './use-window-size'; <-- Remove if shit looks good in production
+//import isClient from './use-window-size'; <-- Remove if shit looks good in production
 
 
 const Navbar = () => {
-    const globalWindow = typeof window !== 'undefined' && window;
-    let [pos, setPos] = useState(globalWindow.pageYOffset);
+    let [pos, setPos] = useState(window.pageYOffset);
     let [visible, setVisible]  = useState(true); 
     const [isActive, setActive] = useState(false);
     const [height, setheight] = useState(98);
@@ -25,6 +25,8 @@ const Navbar = () => {
         }
     `)  
     const { menuLinks } = data.site.siteMetadata
+
+
     
     useEffect(()=> {
         const handleScroll = () => {
@@ -41,6 +43,34 @@ const Navbar = () => {
 
     function toggleIsActive() {
       setActive(isActive === false ? true : false) 
+    }
+
+    function useWindowSize() {
+        const isClient = typeof window === 'object'
+
+        function getSize() {
+            return {
+                width: isClient ? window.innerWidth : undefined,
+                height: isClient ? window.innerHeight : undefined
+            };
+        }
+
+        const [windowSize, setWindowSize] = useState(getSize);
+
+        useEffect(() => {
+            if (!isClient) {
+                return false;
+            }
+
+            function handleResize() {
+                setWindowSize(getSize());
+            }
+
+            window.addEventListener('resize', handleResize);
+            return () => window.removeEventListener('resize', handleResize);
+        }, []); // Empty array ensures that effect is only run on mount and unmount
+
+        return windowSize;
     }
 
     const deskotopNav = (   

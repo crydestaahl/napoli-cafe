@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 
 export default function useWindowSize() {
     const isClient = typeof window === 'object'
+    //const globalWindow = typeof window !== 'undefined' && window;
+    //const isClient = typeof window !== 'undefined' && window;
 
     function getSize() {
         return {
