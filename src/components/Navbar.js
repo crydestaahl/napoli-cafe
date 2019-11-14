@@ -5,12 +5,12 @@ import style from '../pages/style.css'
 //import isClient from './use-window-size'; <-- Remove if shit looks good in production
 
 const Navbar = () => { 
+    const size = useWindowSize();
     let [pos, setPos] = useState(size);
     let [visible, setVisible]  = useState(true); 
     const [isActive, setActive] = useState(false);
     const [height, setheight] = useState(98);
     
-    const size = useWindowSize();
     const data = useStaticQuery(graphql`
         query Navbar {
             site {
