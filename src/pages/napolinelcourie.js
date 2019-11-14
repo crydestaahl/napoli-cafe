@@ -46,7 +46,7 @@ class napoliNelCorie extends Component {
                             animation: 'transition 8s'                                                 
                             }}                
                         >
-                        NAPOLI EL COURIE
+                        NAPOLI EL COURE
                     </h2>
                     <div>
                     {this.state.pictures}            

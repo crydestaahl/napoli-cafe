@@ -3,11 +3,11 @@ module.exports = {
     title: `Napoli Café`,
       menuLinks: [
           {
-            name: 'Tejps',
+            name: 'Tapes',
             link: '/'
           },
           {
-            name: 'Napoli Nel Courie',
+            name: 'Napoli Nel Coure',
             link: 'napolinelcourie'
             }
           ],

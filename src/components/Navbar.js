@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { useStaticQuery, graphql, Link } from "gatsby"
 import style from '../pages/style.css'
-//import useWindowSize from './use-window-size'; <-- Remove if shit looks good in production
-//import isClient from './use-window-size'; <-- Remove if shit looks good in production
+// import useWindowSize from './use-window-size'; <-- Remove if shit looks good in production
+// import isClient from './use-window-size'; <-- Remove if shit looks good in production
 
 const Navbar = () => { 
     const size = useWindowSize();
