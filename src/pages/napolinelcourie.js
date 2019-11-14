@@ -37,23 +37,17 @@ class napoliNelCorie extends Component {
                     }}
                 >
                     <Navbar />
-                    <h1                        
+                    <h2 
+                        className="transition"                        
                         style={{
                             marginTop: `auto`,
-                            padding: '2em 0.4em 0',
+                            padding: '3em 0.4em 0',
                             textAlign: 'left',
-                            animation: 'transition 8s'                                  
+                            animation: 'transition 8s'                                                 
                             }}                
                         >
-                        Napoli El Courie
-                    </h1>
-                    <h5
-                        style={{
-                            textAlign: 'left',
-                            paddingLeft: '1.5em',
-                            animation: 'transition 8s'      
-                        }}
-                    >Photos: Al Bundy</h5>
+                        NAPOLI EL COURIE
+                    </h2>
                     <div>
                     {this.state.pictures}            
                     </div>
