@@ -73,7 +73,7 @@ const Navbar = () => {
         setActive(isActive === false ? true : false)
     }
 
-    const deskotopNav = (   
+    const desktopNav = (   
             <nav 
                 className={"navbar " + (!visible ? "navbarHidden" : " ")}            
                 style={{                
@@ -153,7 +153,9 @@ const Navbar = () => {
 
     return(
       <div>
-      { size.width < 450 ? mobileNav : deskotopNav }
+      { /*size.width < 450 ? mobileNav : deskotopNav */ }
+      {mobileNav}
+      {desktopNav}
       </div>
     );                 
                 
