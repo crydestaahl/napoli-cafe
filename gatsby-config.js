@@ -8,7 +8,7 @@ module.exports = {
           },
           {
             name: 'Napoli Nel Coure',
-            link: 'napolinelcourie'
+            link: 'napolinelcoure'
             }
           ],
     author: `John Örberg`,
