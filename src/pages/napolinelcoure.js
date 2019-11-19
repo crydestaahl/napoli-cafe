@@ -17,7 +17,7 @@ class napoliNelCorie extends Component {
         .then(results => {
             return results.json();
         }).then(data => {
-
+            console.log('hej')
             let layer1 = data.response.posts.map(albums => albums.photos) 
             let pictures = layer1.map(array => array.map((array2, i)  => {
                 return(
