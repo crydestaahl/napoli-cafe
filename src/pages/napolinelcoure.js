@@ -17,6 +17,7 @@ class napoliNelCorie extends Component {
         .then(results => {
             return results.json();
         }).then(data => {
+<<<<<<< HEAD
 
             let layer1 = data.response.posts.map(albums => albums.photos) 
             let pictures = layer1.map(array => array.map((array2, i)  => {
@@ -29,6 +30,16 @@ class napoliNelCorie extends Component {
                 )
             }))
             this.setState({ pictures: pictures });
+=======
+            let pictures = data.response.posts[0].photos.map((pic, i) => {            
+                return(                   
+                    <div>
+                       <img src={pic.original_size.url} alt="pictures from the heart of Napoli" />
+                   </div>
+               )
+            })
+            this.setState({pictures: pictures});
+>>>>>>> e3d576ce133b090488b4ed296cc9fa88c80b0a9c
         })           
     }
    
