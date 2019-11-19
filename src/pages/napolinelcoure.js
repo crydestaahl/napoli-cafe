@@ -20,7 +20,7 @@ class napoliNelCorie extends Component {
             let pictures = data.response.posts[0].photos.map((pic, i) => {            
                 return(                   
                     <div>
-                       <img src={pic.original_size.url} />
+                       <img src={pic.original_size.url} alt="pictures from the heart of Napoli" />
                    </div>
                )
             })
@@ -46,7 +46,7 @@ class napoliNelCorie extends Component {
                             animation: 'transition 8s'                                                 
                             }}                
                         >
-                        NAPOLI NEL COURE
+                        NAPOLI NEL CUORE
                     </h2>
                     <div>
                     {this.state.pictures}            
