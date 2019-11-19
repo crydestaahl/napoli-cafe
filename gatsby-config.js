@@ -7,7 +7,7 @@ module.exports = {
             link: '/'
           },
           {
-            name: 'Napoli Nel Coure',
+            name: 'Napoli Nel Cuore',
             link: 'napolinelcoure'
             }
           ],

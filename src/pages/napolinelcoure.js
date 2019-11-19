@@ -17,14 +17,18 @@ class napoliNelCorie extends Component {
         .then(results => {
             return results.json();
         }).then(data => {
-            let pictures = data.response.posts[0].photos.map((pic, i) => {            
-                return(                   
-                    <div>
-                       <img src={pic.original_size.url} />
-                   </div>
-               )
-            })
-            this.setState({pictures: pictures});
+
+            let layer1 = data.response.posts.map(albums => albums.photos) 
+            let pictures = layer1.map(array => array.map((array2, i)  => {
+                return(
+                    <Fade cascade>                    
+                        <div>
+                            <img src={array2.original_size.url} />
+                        </div>
+                    </Fade>
+                )
+            }))
+            this.setState({ pictures: pictures });
         })           
     }
    
@@ -46,7 +50,7 @@ class napoliNelCorie extends Component {
                             animation: 'transition 8s'                                                 
                             }}                
                         >
-                        NAPOLI NEL COURE
+                        NAPOLI NEL CUORE
                     </h2>
                     <div>
                     {this.state.pictures}            
