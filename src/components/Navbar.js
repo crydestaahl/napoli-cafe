@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { useStaticQuery, graphql, Link } from "gatsby"
 import style from '../pages/style.css'
 // import useWindowSize from './use-window-size'; <-- Remove if shit looks good in production
@@ -7,10 +7,12 @@ import style from '../pages/style.css'
 const Navbar = () => { 
     const size = useWindowSize();
     const globalWindow = typeof window !== 'undefined' && window;
+    const prevScrollY = useRef(0);
     let [pos, setPos] = useState(globalWindow.pageYOffset);
     let [visible, setVisible]  = useState(true); 
     const [isActive, setActive] = useState(false);
     const [height, setheight] = useState(98);
+    const [goingUp, setGoingUp] = useState(false); 
     
     const data = useStaticQuery(graphql`
         query Navbar {
@@ -27,6 +29,24 @@ const Navbar = () => {
     const { menuLinks } = data.site.siteMetadata
 
 
+    // Listens for scroll on mobile
+    useEffect(() => {
+        const handleScroll = () => {
+          const currentScrollY = window.scrollY;
+          if (prevScrollY.current < currentScrollY && goingUp) {
+            setGoingUp(false);
+          }
+          if (prevScrollY.current > currentScrollY && !goingUp) {
+            setGoingUp(true);
+          }
+    
+          prevScrollY.current = currentScrollY;
+        };
+    
+        window.addEventListener("scroll", handleScroll, { passive: true });
+    
+        return () => window.removeEventListener("scroll", handleScroll);
+      }, [goingUp]);
     
     useEffect(()=> {
         const handleScroll = () => {
@@ -40,6 +60,8 @@ const Navbar = () => {
                 window.removeEventListener("scroll", handleScroll);
             })
     })
+
+
 
     function useWindowSize() {
         const isClient = typeof window === 'object'
@@ -112,7 +134,7 @@ const Navbar = () => {
     );
 
     const mobileNav = (
-            <nav className="donotshow">
+            <nav className={"donotshow mobile-navbar" + (!visible ? "navbarHidden" : " ")}>
             <div 
                 class={"container" + (isActive ? ' change' : '')} 
                 onClick={ toggleIsActive }                

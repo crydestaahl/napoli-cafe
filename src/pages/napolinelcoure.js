@@ -17,13 +17,20 @@ class napoliNelCorie extends Component {
         .then(results => {
             return results.json();
         }).then(data => {
-            console.log('hej')
+
             let layer1 = data.response.posts.map(albums => albums.photos) 
             let pictures = layer1.map(array => array.map((array2, i)  => {
                 return(
                     <Fade cascade>                    
                         <div>
-                            <img src={array2.original_size.url} />
+                            <img 
+                                src={array2.original_size.url} 
+                                loading="lazy" 
+                                alt="photos from the heart of Napoli" 
+                                style={{
+                                    height: 'auto'
+                                }}    
+                                />
                         </div>
                     </Fade>
                 )
@@ -31,8 +38,8 @@ class napoliNelCorie extends Component {
             this.setState({ pictures: pictures });
         })           
     }
-   
-    render() {
+
+       render() {
         return(
             <Fade cascade>                        
                 <div                    

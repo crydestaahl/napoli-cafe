@@ -73,6 +73,15 @@ nav ul li a {
     height: 58px;
 }
 
+.mobile-navbar {
+    position: fixed;
+    z-index: 1000;
+    overflow: hidden; 
+    width: 100%;  
+    background: white; 
+    transition: 0.4s;
+}
+
 .mobile-nav-links {
     overflow: hidden;
     text-align: end;
