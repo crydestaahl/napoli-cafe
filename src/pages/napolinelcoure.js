@@ -52,7 +52,7 @@ class napoliNelCorie extends Component {
                         className="transition"                        
                         style={{
                             marginTop: `auto`,
-                            padding: '3em 0.4em 0',
+                            padding: '3.5em 0.4em 0',
                             textAlign: 'left',
                             animation: 'transition 8s'                                                 
                             }}                
