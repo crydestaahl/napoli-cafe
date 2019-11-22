@@ -9,6 +9,11 @@
 
 }
 
+/**************************************************
+GENREAL STYLES
+**************************************************/
+
+
 html, 
 p, 
 h1, 
@@ -20,21 +25,21 @@ footer {
 }
 
 p {
-    color: black;
-    animation: transition 8s; 
+    color: #333;
+    /* animation: transition 8s; 
     animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out; */
 
 }
 
 h1, a, .transition {
-    color: black; 
+    color: #333; 
     font-family: 'akzidenz-grotesk_bqbold';
     letter-spacing: -1px;
     text-transform: uppercase;
-    animation: transition 8s; 
+    /* animation: transition 8s; 
     animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out; */
 }
 
 nav ul li a {
@@ -42,7 +47,7 @@ nav ul li a {
 }
 
 .btn {
-    color: black; 
+    color: #333; 
     font-family: inherit;
     background: none; 
     border: none;
@@ -50,24 +55,33 @@ nav ul li a {
     font-weight: bold;
     margin: 0 0 4em;
     animation: transition 8s; 
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
+    /* animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out; */
 }
 
 .centered {
     text-align: center;
 }
 
+/**************************************************
+LOGO STYLES
+**************************************************/
+
 .logo-image {
     padding-top: 8rem;
 
 }
 .logo-image path {    
-    fill: #0f669c; 
-    animation: transition2 14s;
+    fill: #333; 
+    /* animation: transition2 14s;
     animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out; 
+    animation-timing-function: ease-in-out;  */
 }
+
+
+/**************************************************
+NAVBAR
+**************************************************/
 
 .navbar {
     height: 58px;
@@ -120,6 +134,17 @@ nav ul li a {
   transform: rotate(45deg) translate(-8px, -8px);
 }
 
+
+
+/**************************************************
+NAPOLI NEL CUORE
+**************************************************/
+
+
+/**************************************************
+KEYFRAMES
+**************************************************/
+
 @keyframes heightAnimation {
     0% {
         height: 58px,
@@ -153,6 +178,10 @@ nav ul li a {
         fill: black;   
     }
 }
+
+/**************************************************
+MEDIAQUERIES
+**************************************************/
 
 @media only screen and (max-width: 450px) {
   .navbar {

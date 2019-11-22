@@ -123,7 +123,7 @@ const Navbar = () => {
                             <Link 
                                 className='navlistMobile'
                                 style={{
-                                    color: `black`,
+                                    color: `#333`,
                             }} to={link.link}>
                                 {link.name}
                             </Link>
@@ -160,7 +160,7 @@ const Navbar = () => {
                             >
                                 <Link                                
                                     style={{
-                                        color: `black`,
+                                        color: `#333`,
                                         background: 'c8f331'
                                     }} to={link.link}>
                                     {link.name}
