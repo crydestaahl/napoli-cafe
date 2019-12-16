@@ -54,7 +54,7 @@ nav ul li a {
     font-family: 'Work Sans';
     font-weight: bold;
     margin: 0 0 4em;
-    animation: transition 8s; 
+    /*animation: transition 8s; */
     /* animation-iteration-count: infinite;
     animation-timing-function: ease-in-out; */
 }
@@ -93,7 +93,7 @@ NAVBAR
     overflow: hidden; 
     width: 100%;  
     background: white; 
-    transition: 0.4s;
+    transition: .2s;
 }
 
 .mobile-nav-links {
@@ -139,6 +139,11 @@ NAVBAR
 /**************************************************
 NAPOLI NEL CUORE
 **************************************************/
+
+.grid-item {
+    
+   
+}
 
 
 /**************************************************
@@ -190,7 +195,21 @@ MEDIAQUERIES
 }
 
 @media only screen and (min-width: 450px) {
-  .donotshow {
-    display: none;
-  }
+    
+    .donotshow {
+        display: none;
+    }
+
+    .wrapper {
+        display: grid;
+        justify-items: center;
+        grid-template-columns:  auto; /* auto auto auto */
+        column-gap: 2em;
+        padding: 6em 6em;
+    }
+/* 
+    .grid-item:nth-child(4n) {
+        grid-column-start: 1;
+        grid-column-end: 4;
+    } */ 
 }

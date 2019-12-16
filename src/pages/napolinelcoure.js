@@ -20,33 +20,30 @@ class napoliNelCorie extends Component {
 
             let layer1 = data.response.posts.map(albums => albums.photos) 
             let pictures = layer1.map(array => array.map((array2, i)  => {
-                return(
-                    <Fade cascade>                    
-                        <div>
-                            <img 
-                                src={array2.original_size.url} 
-                                loading="lazy" 
-                                alt="photos from the heart of Napoli" 
-                                style={{
-                                    height: 'auto'
-                                }}    
-                                />
-                        </div>
-                    </Fade>
-                )
-            }))
-            this.setState({ pictures: pictures });
+                return(                                                        
+                    <img
+                        className="grid-item" 
+                        src={array2.original_size.url} 
+                        loading="lazy" 
+                        alt="photos from the heart of Napoli" 
+                        style={{
+                            height: 'auto'
+                        }}    
+                        />                    
+                    )
+                }))
+                this.setState({ pictures: pictures });
         })           
     }
 
        render() {
-        return(
-            <Fade cascade>                        
+        return(                  
                 <div                    
                     style={{
                         textAlign: `center`
                     }}
-                >
+                    >
+                <Fade cascade>     
                     <Navbar />
                     <h2 
                         className="transition"                        
@@ -54,17 +51,20 @@ class napoliNelCorie extends Component {
                             marginTop: `auto`,
                             padding: '3.5em 0.4em 0',
                             textAlign: 'left',
-                            animation: 'transition 8s'                                                 
+                            /* animation: 'transition 8s' */                                                 
                             }}                
                         >
                         NAPOLI NEL CUORE
                     </h2>
-                    <div>
-                    {this.state.pictures}            
+                </Fade>
+                    <div
+                        className="wrapper"
+                    >
+                        {this.state.pictures}            
                     </div>
                 </div>           
-            </Fade>
-        )
+                
+            )
     }
 }
 export default napoliNelCorie
