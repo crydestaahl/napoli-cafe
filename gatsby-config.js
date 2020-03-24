@@ -7,8 +7,8 @@ module.exports = {
         link: "/",
       },
       {
-        name: "Shop",
-        link: "shop",
+        // name: "Shop",
+        // link: "shop",
       },
       {
         name: "Napoli Nel Cuore",
