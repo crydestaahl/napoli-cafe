@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Navbar from '../components/Navbar'
 import Fade from 'react-reveal/Fade'
+import Headspace from 'react-headspace'; 
 import { graphql } from "gatsby"
 
 
@@ -43,14 +44,17 @@ class napoliNelCorie extends Component {
                         textAlign: `center`
                     }}
                     >
-                <Fade cascade>     
-                    <Navbar />
+                <Fade cascade>  
+                <Headspace>
+                    <Navbar />               
+                </Headspace>            
                     <h2 
                         className="transition"                        
                         style={{
                             marginTop: `auto`,
                             padding: '3.5em 0.4em 0',
                             textAlign: 'left',
+                            
                             /* animation: 'transition 8s' */                                                 
                             }}                
                         >

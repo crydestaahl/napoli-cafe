@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import ImageGallery from 'react-image-gallery';
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -13,6 +14,17 @@ class BlogPostTemplate extends React.Component {
     const post = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pageContext
+    
+    const images = [
+      {
+        original: `${post.frontmatter.featuredimage_1}`,
+        thumbnail: `${post.frontmatter.featuredimage_1}`,
+      },
+      {
+        original: `${post.frontmatter.featuredimage_2}`,
+        thumbnail: `${post.frontmatter.featuredimage_2}`,
+      },
+    ]
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -25,12 +37,11 @@ class BlogPostTemplate extends React.Component {
             <h1
               className="transition"
               style={{
-                marginTop: rhythm(1),
-                marginBottom: 0,                 
-      }}
-    >
+                marginTop: rhythm(1.5),
+                marginBottom: 0,
+              }}
+            >
               {post.frontmatter.title}
-
             </h1>
             <p
               style={{
@@ -42,8 +53,14 @@ class BlogPostTemplate extends React.Component {
               {post.frontmatter.date}
             </p>
           </header>
-                    
-          <p dangerouslySetInnerHTML={{ __html: post.frontmatter.widget}}/>
+
+          <p dangerouslySetInnerHTML={{ __html: post.frontmatter.widget }} />
+
+          {
+            post.frontmatter.featuredimage_1 ? (
+            <ImageGallery lazyLoad={true} showNav={false} items={images} />
+          ) : null 
+          }
 
           <section dangerouslySetInnerHTML={{ __html: post.html }} />
           <hr
@@ -51,8 +68,7 @@ class BlogPostTemplate extends React.Component {
               marginBottom: rhythm(1),
             }}
           />
-          <footer>
-          </footer>
+          <footer></footer>
         </article>
 
         <nav>
@@ -104,6 +120,8 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         widget
+        featuredimage_1        
+        featuredimage_2        
       }
     }
   }

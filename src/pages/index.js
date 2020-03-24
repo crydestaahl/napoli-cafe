@@ -58,7 +58,8 @@ class BlogIndex extends React.Component {
               <div>                        
                 <p 
                   style={{
-                    zIndex: 50
+                    zIndex: -1,
+                    position: 'relative'
                   }}
                   dangerouslySetInnerHTML={{
                     __html: node.frontmatter.widget

@@ -10,10 +10,10 @@ module.exports = {
             name: 'Napoli Nel Cuore',
             link: 'napolinelcoure'
             },
-        // {
-        //   name: 'Shop',
-        //   link: 'shop'
-        // },
+        {
+          name: 'Shop',
+          link: 'shop'
+        },
           ],
     author: `John Örberg`,
     description: `Napoli sound, saved on tape - served digital.`,
@@ -42,6 +42,11 @@ module.exports = {
         options: {
           path: `${__dirname}/content/assets/images`,
           name: `images`,
+      },
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/products`,
+        name: `products`,
       }
     },
     {

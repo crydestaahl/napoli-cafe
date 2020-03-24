@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Work+Sans&display=swap'); 
+@import "~react-image-gallery/styles/css/image-gallery.css";
+
 
 @font-face {
     font-family: 'akzidenz-grotesk_bqbold';
@@ -43,7 +45,11 @@ h1, a, .transition {
 }
 
 nav ul li a {
-    text-decoration: none;
+    text-decoration: none;    
+}
+
+a {
+    box-shadow: none;
 }
 
 .btn {
@@ -94,6 +100,7 @@ NAVBAR
     width: 100%;  
     background: white; 
     transition: .2s;
+    top: 0; 
 }
 
 .mobile-nav-links {
@@ -134,16 +141,20 @@ NAVBAR
   transform: rotate(45deg) translate(-8px, -8px);
 }
 
+/**************************************************
+Product list
+**************************************************/
+
+.prod-list-wrapper {
+    margin: 5rem 2rem;
+}
 
 
+/* .image-gallery-right-nav,
+.image-gallery-svg  */
 /**************************************************
 NAPOLI NEL CUORE
 **************************************************/
-
-.grid-item {
-    
-   
-}
 
 
 /**************************************************
@@ -187,7 +198,7 @@ KEYFRAMES
 /**************************************************
 MEDIAQUERIES
 **************************************************/
-
+/* Mobile */
 @media only screen and (max-width: 450px) {
   .navbar {
     display: none;

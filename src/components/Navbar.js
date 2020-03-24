@@ -11,7 +11,7 @@ const Navbar = () => {
     let [pos, setPos] = useState(globalWindow.pageYOffset);
     let [visible, setVisible]  = useState(true); 
     const [isActive, setActive] = useState(false);
-    const [height, setheight] = useState(98);
+    const [height, setheight] = useState(137);
     const [goingUp, setGoingUp] = useState(false); 
     
     const data = useStaticQuery(graphql`
@@ -104,7 +104,8 @@ const Navbar = () => {
                     background: 'white',
                     position: 'fixed',
                     boxShadow: '0 2px 5px 0px rgba(0,0,0,0.15)',
-                    overflow: 'hidden'                
+                    overflow: 'hidden',
+                    top: 0                 
                 }}
                 >
                 <ul 
@@ -155,7 +156,6 @@ const Navbar = () => {
                                 key={link.name}
                                 style={{
                                     listStyleType: `none`,
-                                    
                                 }}
                             >
                                 <Link                                
@@ -167,8 +167,7 @@ const Navbar = () => {
                                 </Link>
                             </li>
                         ))}
-                    </ul>
-                            
+                    </ul>   
                 </div>
             </nav>               
     );

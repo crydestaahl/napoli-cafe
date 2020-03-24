@@ -1,12 +1,16 @@
 ---
 path: tee1/tee1
 title: Napoli Tee
-featuredimage: /assets/shop-img2.jpg
+featuredimage_1: /assets/shop-img1.jpg
+featuredimage_2: /assets/shop-img2.jpg
+description: The official Napoli Tee.
 ---
-This tee is crafted in finest Polish cotton. Printed by us in Gothenburg, Sweden. 
-
-To buy this fine ass tee, please send us an email whit your contact info, address etc. Wait till Dimmie get's back to you with further info.
+The Napoli tee is crafted from finest Polish cotton. Printed by us in Gothenburg, Sweden. It has a small print on the front, large logo on the back.
 
 * 100% Polish cotton  
+* Classic crewneck
 * Printed in Gothenburg
-* Crewneck
+
+**To buy this fine ass tee, please send us an [email](mailto:dimmi@napoli-cafe.com)  with your contact info, address etc, and wait till Dimmie get's back to you with further info.**
+
+
