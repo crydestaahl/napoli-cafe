@@ -52,6 +52,10 @@ a {
     box-shadow: none;
 }
 
+footer {
+    margin-top: 4rem; 
+}
+
 .btn {
     color: #333; 
     font-family: inherit;

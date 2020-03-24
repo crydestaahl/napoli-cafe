@@ -1,20 +1,20 @@
 module.exports = {
   siteMetadata: {
     title: `Napoli Café`,
-      menuLinks: [
-          {
-            name: 'Tapes',
-            link: '/'
-          },
-          {
-            name: 'Napoli Nel Cuore',
-            link: 'napolinelcoure'
-            },
-        {
-          name: 'Shop',
-          link: 'shop'
-        },
-          ],
+    menuLinks: [
+      {
+        name: "Tapes",
+        link: "/",
+      },
+      {
+        name: "Shop",
+        link: "shop",
+      },
+      {
+        name: "Napoli Nel Cuore",
+        link: "napolinelcoure",
+      },
+    ],
     author: `John Örberg`,
     description: `Napoli sound, saved on tape - served digital.`,
     siteUrl: `https://www.napoli-cafe.com/`,
@@ -24,7 +24,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-netlify-cms`,
-  
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -37,17 +37,17 @@ module.exports = {
       options: {
         path: `${__dirname}/content/assets`,
         name: `assets`,
-      },      
-        resolve: `gatsby-source-filesystem`,
-        options: {
-          path: `${__dirname}/content/assets/images`,
-          name: `images`,
+      },
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/assets/images`,
+        name: `images`,
       },
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/products`,
         name: `products`,
-      }
+      },
     },
     {
       resolve: `gatsby-transformer-remark`,
@@ -58,7 +58,6 @@ module.exports = {
             options: {
               maxWidth: 590,
             },
-            
           },
           {
             resolve: `gatsby-remark-responsive-iframe`,
