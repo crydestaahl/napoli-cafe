@@ -26,6 +26,7 @@ class BlogPostTemplate extends React.Component {
       },
     ]
 
+    console.log(post.frontmatter.featuredimage_1)
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
@@ -57,9 +58,9 @@ class BlogPostTemplate extends React.Component {
           <p dangerouslySetInnerHTML={{ __html: post.frontmatter.widget }} />
 
           {
-            post.frontmatter.featuredimage_1 ? (
+            post.frontmatter.featuredimage_1 ? 
             <ImageGallery lazyLoad={true} showNav={false} items={images} />
-          ) : null 
+           : <hi>NEJ</hi>
           }
 
           <section dangerouslySetInnerHTML={{ __html: post.html }} />
