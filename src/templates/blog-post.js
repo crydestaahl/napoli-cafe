@@ -60,7 +60,7 @@ class BlogPostTemplate extends React.Component {
           {
             post.frontmatter.featuredimage_1 ? 
             <ImageGallery lazyLoad={true} showNav={false} items={images} />
-           : <hi>NEJ</hi>
+           : null
           }
 
           <section dangerouslySetInnerHTML={{ __html: post.html }} />
