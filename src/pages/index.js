@@ -30,62 +30,64 @@ class BlogIndex extends React.Component {
     const { height } = this.state;
   
     return (
-      <ParallaxProvider>  
-      <Layout location={this.props.location} title={siteTitle}>
-        <SEO title="Tapes" />
-        {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug
-          return (
-            <article key={node.fields.slug} style={{ marginTop: `40%`}}>              
-              <header>               
-                  <h1
+      <div style={{ overflowX: 'hidden'}}>
+        <ParallaxProvider>  
+        <Layout location={this.props.location} title={siteTitle}>
+          <SEO title="Tapes" />
+          {posts.map(({ node }) => {
+            const title = node.frontmatter.title || node.fields.slug
+            return (
+              <article key={node.fields.slug} style={{ marginTop: `40%`}}>              
+                <header>               
+                    <h1
+                      style={{
+                        marginBottom: rhythm(1 / 4)                
+                      }}
+                    >
+                      <Link 
+                        style={{ 
+                        boxShadow: `none`,                                               
+                      }} 
+                        to={node.fields.slug}>                    
+                        {title} 
+                      </Link>
+                    </h1>
+                    <p>
+                      {node.frontmatter.date}
+                    </p> 
+                </header>
+                <div>                        
+                  <p 
                     style={{
-                      marginBottom: rhythm(1 / 4)                
+                      zIndex: -1,
+                      position: 'relative'
                     }}
-                  >
-                    <Link 
-                      style={{ 
-                      boxShadow: `none`,                                               
-                    }} 
-                      to={node.fields.slug}>                    
-                      {title} 
-                    </Link>
-                  </h1>
-                  <p>
-                    {node.frontmatter.date}
-                  </p> 
-              </header>
-              <div>                        
-                <p 
-                  style={{
-                    zIndex: -1,
-                    position: 'relative'
-                  }}
-                  dangerouslySetInnerHTML={{
-                    __html: node.frontmatter.widget
-                  }}
-                />                              
-                <AnimateHeight
-                  duration={800}
-                  height={height}>  
-                  <p
                     dangerouslySetInnerHTML={{
-                      __html: node.excerpt
+                      __html: node.frontmatter.widget
                     }}
-                  />    
-                </AnimateHeight>                     
-                <button 
-                  className="btn" 
-                  onClick={this.toggle}
-                  >
-                  {height === 0 ? 'Show Tracklist' : 'Hide Tracklist'}                  
-                </button>                  
-              </div>        
-            </article>
-          )
-        })}
-      </Layout>
-      </ParallaxProvider>
+                  />                              
+                  <AnimateHeight
+                    duration={800}
+                    height={height}>  
+                    <p
+                      dangerouslySetInnerHTML={{
+                        __html: node.excerpt
+                      }}
+                    />    
+                  </AnimateHeight>                     
+                  <button 
+                    className="btn" 
+                    onClick={this.toggle}
+                    >
+                    {height === 0 ? 'Show Tracklist' : 'Hide Tracklist'}                  
+                  </button>                  
+                </div>        
+              </article>
+            )
+          })}
+        </Layout>
+        </ParallaxProvider>
+      </div>
     )
   }
 }
