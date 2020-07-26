@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { useStaticQuery, graphql, Link } from "gatsby"
+import instaLogo from '../../static/assets/instagram.png'
 import style from '../pages/style.css'
 // import useWindowSize from './use-window-size'; <-- Remove if shit looks good in production
 // import isClient from './use-window-size'; <-- Remove if shit looks good in production
@@ -11,7 +12,7 @@ const Navbar = () => {
     let [pos, setPos] = useState(globalWindow.pageYOffset);
     let [visible, setVisible]  = useState(true); 
     const [isActive, setActive] = useState(false);
-    const [height, setheight] = useState(137);
+    const [height, setheight] = useState(187);
     const [goingUp, setGoingUp] = useState(false); 
     
     const data = useStaticQuery(graphql`
@@ -123,13 +124,23 @@ const Navbar = () => {
                         >
                             <Link 
                                 className='navlistMobile'
-                                style={{
-                                    color: `#333`,
-                            }} to={link.link}>
+                                style={{color: `#333`, }} to={link.link}>
                                 {link.name}
                             </Link>
                         </li>
                     ))}
+                    <li className='navlistMobile'
+                        style={{ 
+                            color: `#333`, 
+                            listStyleType: `none`,
+                            padding: `1rem`, 
+                            marginLeft: 'auto' 
+                            }}>
+                                <a href="http://www.instagram.com/napolicafe_" target="_blank"><img src={instaLogo} style={{height: '30px', width: '30px'}}>
+                            </img>
+                            </a>
+                        </li>
+                    
                 </ul>
             </nav>
     );
@@ -167,6 +178,7 @@ const Navbar = () => {
                                 </Link>
                             </li>
                         ))}
+                        <li style={{listStyleType: `none`}}><a href="http://www.instagram.com/napolicafe_" target="_blank"><img src={instaLogo} style={{height: '25px', width: '25px'}}></img></a></li>
                     </ul>   
                 </div>
             </nav>               
