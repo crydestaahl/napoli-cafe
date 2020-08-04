@@ -32,6 +32,7 @@
     "gatsby-transformer-remark": "^2.6.15",
     "gatsby-transformer-sharp": "^2.2.7",
     "headspace": "^0.1.1",
+    "html-react-parser": "^0.13.0",
     "net": "^1.0.2",
     "netlify-cms-app": "^2.9.7",
     "prismjs": "^1.17.1",

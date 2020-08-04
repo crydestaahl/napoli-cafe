@@ -5,6 +5,7 @@ import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
 import AnimateHeight from 'react-animate-height'
 import { ParallaxProvider } from 'react-scroll-parallax'
+import Parser from 'html-react-parser'
 
 import './style.css'
 import Navbar from "../components/Navbar"
@@ -57,15 +58,9 @@ class BlogIndex extends React.Component {
                     </p> 
                 </header>
                 <div>                        
-                  <p 
-                    style={{
-                      zIndex: -1,
-                      position: 'relative'
-                    }}
-                    dangerouslySetInnerHTML={{
-                      __html: node.frontmatter.widget
-                    }}
-                  />                              
+
+                <div className='widget'>{Parser(node.frontmatter.widget)}</div>             
+
                   <AnimateHeight
                     duration={800}
                     height={height}>  
@@ -73,7 +68,7 @@ class BlogIndex extends React.Component {
                       dangerouslySetInnerHTML={{
                         __html: node.excerpt
                       }}
-                    />    
+                    />  
                   </AnimateHeight>                     
                   <button 
                     className="btn" 
