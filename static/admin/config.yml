@@ -1,5 +1,5 @@
 backend:
-  name: github
+  name: git-gateway
   repo: crydestaahl/napoli-cafe
 media_folder: static/assets
 public_folder: assets
