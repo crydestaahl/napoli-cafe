@@ -5,15 +5,20 @@ import ImageGallery from 'react-image-gallery';
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
-
+import { Disqus, CommentCount } from 'gatsby-plugin-disqus'
 import '../pages/style.css'
 
 class BlogPostTemplate extends React.Component {
-
+  
   render() {
     const post = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pageContext
+
+    let disqusConfig = {
+      identifier: post.id,
+      title: siteTitle,
+    }
     
     const images = [
       {
@@ -69,6 +74,9 @@ class BlogPostTemplate extends React.Component {
               marginBottom: rhythm(1),
             }}
           />
+          <CommentCount config={disqusConfig} placeholder={'hej'} />
+
+          <Disqus config={disqusConfig} />
           <footer></footer>
         </article>
 
