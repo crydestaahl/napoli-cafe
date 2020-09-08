@@ -74,7 +74,7 @@ class BlogPostTemplate extends React.Component {
               marginBottom: rhythm(1),
             }}
           />
-          <CommentCount config={disqusConfig} placeholder={'hej'} />
+          <CommentCount config={disqusConfig} placeholder={''} />
 
           <Disqus config={disqusConfig} />
           <footer></footer>
