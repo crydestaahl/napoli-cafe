@@ -3,7 +3,7 @@ module.exports = {
     title: `Napoli Café`,
     menuLinks: [
       {
-        name: "Tapes",
+        name: "Casette Tapes",
         link: "/",
       },
       {
