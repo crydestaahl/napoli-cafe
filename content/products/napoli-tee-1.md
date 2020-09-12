@@ -12,4 +12,4 @@ The Napoli tee is crafted from finest cotton. Printed by us in Gothenburg, Swede
 * Neck label 
 * Classic crewneck
 
-To buy the tee , please send us an \[EMAIL](mailto:dimmi@napoli-cafe.com)
+To buy the tee , please send us an email to mailto:dimmi@napoli-cafe.com
