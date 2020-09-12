@@ -8,8 +8,8 @@ featuredimage_2: /assets/shop-img2.jpg
 The Napoli tee is crafted from finest cotton. Printed by us in Gothenburg, Sweden. It has a small print on the front, large logo on the back.
 
 * 100% cotton
-* 210 g 
+* 210 g
 * Neck label 
 * Classic crewneck
 
-To buy this fine ass tee, please send us an [EMAIL](dimmie@napoli-cafe.com)
+To buy the tee , please send us an [EMAIL](dimmie@napoli-cafe.com)
