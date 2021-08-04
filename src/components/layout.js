@@ -538,13 +538,18 @@ class Layout extends React.Component {
             </main>
             
             <footer>
-              © {new Date().getFullYear()}, Built with
+            <p style={{textAlign: 'center'}}>©{new Date().getFullYear()} Napoli Café.</p>
+            {/*
+              © {new Date().getFullYear()} Napoli Café, Built with
               {` `}
+
+              
               <a href="https://www.gatsbyjs.org">Gatsby</a>{` `} 
               edited by <a style={{fontStyle: 'capitalize'}} href="mailto:kristoffer@oholics.com">acidCode. </a>
 
-      
-               Got something on your mind? Contact <a href="mailto:dimmi@napoli-cafe.com">Dimmi</a>. 
+              
+              Got something on your mind? Contact <a href="mailto:dimmi@napoli-cafe.com">Dimmi</a>.
+              */}
             </footer>
           </Fade>  
         </div>
