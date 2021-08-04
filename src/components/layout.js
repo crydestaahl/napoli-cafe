@@ -531,7 +531,7 @@ class Layout extends React.Component {
           
             <main>
 
-            <h2 style={{textAlign: 'center'}}>🚧 Under construction, stay tuned! 🚧</h2>
+            <h4 style={{textAlign: 'center'}}>Under construction<br/> stay tuned!</h4>
             
             {/*children*/}
             
