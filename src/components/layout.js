@@ -509,7 +509,9 @@ class Layout extends React.Component {
     }
     return (
       <div>
-        <Navbar />
+        {/*
+          <Navbar />
+        */}
         <div
           style={{
             marginLeft: `auto`,
@@ -527,14 +529,22 @@ class Layout extends React.Component {
             {header}
             </header> 
           
-            <main>{children}</main>
+            <main>
+
+            <h2 style={{textAlign: 'center'}}>🚧 Under construction, stay tuned! 🚧</h2>
+            
+            {/*children*/}
+            
+            </main>
             
             <footer>
               © {new Date().getFullYear()}, Built with
               {` `}
               <a href="https://www.gatsbyjs.org">Gatsby</a>{` `} 
-              edited by acidCode.
-              Got something on your mind? Contact <a href="mailto:dimmi@napoli-cafe.com">Dimmi</a>. 
+              edited by <a style={{fontStyle: 'capitalize'}} href="mailto:kristoffer@oholics.com">acidCode. </a>
+
+      
+               Got something on your mind? Contact <a href="mailto:dimmi@napoli-cafe.com">Dimmi</a>. 
             </footer>
           </Fade>  
         </div>
