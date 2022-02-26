@@ -36,7 +36,7 @@
     "html-react-parser": "^0.13.0",
     "net": "^1.0.2",
     "netlify-cms-app": "^2.9.7",
-    "prismjs": "^1.17.1",
+    "prismjs": "^1.27.0",
     "react": "^16.13.1",
     "react-animate-height": "^2.0.15",
     "react-burger-menu": "^2.6.12",
